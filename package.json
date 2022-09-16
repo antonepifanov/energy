@@ -6,13 +6,9 @@
   "scripts": {
     "start": "gulp",
     "lint": "eslint ./src",
-    "lint:fix": "eslint src/js --fix",
-    "mock:products": "json-server --watch src/js/data/products.json --port 3000"
+    "lint:fix": "eslint src/js --fix"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
-    "babel-loader": "^8.2.4",
     "browser-sync": "^2.27.9",
     "del": "^6.0.0",
     "eslint": "^8.13.0",
@@ -29,9 +25,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgstore": "^9.0.0",
-    "prettier": "^2.6.2",
-    "webpack": "^5.72.0",
-    "webpack-stream": "^7.0.0"
+    "prettier": "^2.6.2"
   },
   "husky": {
     "hooks": {
@@ -44,9 +38,5 @@
       "git add"
     ]
   },
-  "type": "module",
-  "dependencies": {
-    "imask": "^6.4.2",
-    "swiper": "^8.3.2"
-  }
+  "type": "module"
 }

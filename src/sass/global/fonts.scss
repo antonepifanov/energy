@@ -1,0 +1,35 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Muller";
+  font-display: swap;
+  src: url("../fonts/MullerRegular.woff2") format("woff2"),
+       url("../fonts/MullerRegular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Muller";
+  font-display: swap;
+  src: url("../fonts/MullerMedium.woff2") format("woff2"),
+       url("../fonts/MullerMedium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Muller";
+  font-display: swap;
+  src: url("../fonts/MullerBold.woff2") format("woff2"),
+       url("../fonts/MullerBold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Noto Sans";
+  font-display: swap;
+  src: url("../fonts/noto-sans-bold.woff2") format("woff2"),
+       url("../fonts/noto-sans-bold.woff") format("woff");
+}

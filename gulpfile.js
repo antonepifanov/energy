@@ -3,13 +3,8 @@ const { src, dest, watch } = gulp;
 import sass from 'gulp-dart-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
-import fileinclude from 'gulp-file-include';
-import htmlmin from 'gulp-htmlmin';
 import libsquoosh from 'gulp-libsquoosh';
 import svgstore from 'gulp-svgstore';
-import webpack from 'webpack';
-import webpackStream from 'webpack-stream';
-import webpackConfig from './webpack.config.js';
 import rename from 'gulp-rename';
 import del from 'del';
 import browser from 'browser-sync';
@@ -19,12 +14,10 @@ import browser from 'browser-sync';
 const styles = () => {
     return src('src/sass/styles.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }))
+        .pipe(sass())
         .pipe(autoprefixer())
         .pipe(sourcemaps.write('.'))
-        .pipe(rename('styles.min.css'))
+        .pipe(rename('styles.css'))
         .pipe(dest('dist/css'))
         .pipe(browser.stream());
 }
@@ -32,9 +25,8 @@ const styles = () => {
 //JS
 
 const scripts = () => {
-    return src('src/js/main.js')
-        .pipe(webpackStream(webpackConfig, webpack))
-        .pipe(dest('dist/js'))
+    return src('src/*.js')
+    .pipe(dest('dist'))
 }
 
 //Clean
@@ -46,19 +38,7 @@ const clean = () => {
 //HTML
 
 const html = () => {
-    return src('src/html/*.html')
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: 'src',
-            context: {
-                test: 'text'
-            }
-        }))
-        .pipe(htmlmin({
-            sortAttributes: true,
-            removeComments: true,
-            collapseWhitespace: true
-        }))
+    return src('src/*.html')
         .pipe(dest('dist'));
 }
 
@@ -77,7 +57,7 @@ const webp = () => {
         .pipe(libsquoosh({
             webp: {}
         }))
-        .pipe(dest('dist/img/webp'))
+        .pipe(dest('dist/img'))
 }
 
 //Sprite
@@ -93,16 +73,8 @@ const sprite = () => {
 //Copy
 
 const copy = () => {
-    return src(['src/fonts/*.{woff2,woff}',
-        'src/favicon.ico',
-        'src/manifest.webmanifest',
-        'src/data/**/*.json',
-        'src/video/*.{mp4,webm,ogv}'
-    ], {
-        base: 'src',
-        allowEmpty: true
-    })
-        .pipe(dest('dist'))
+    return src('src/fonts/*.{woff2,woff}')
+        .pipe(dest('dist/fonts'))
 }
 
 // Server
@@ -130,8 +102,8 @@ const reload = (done) => {
 
 const watcher = () => {
     watch('src/**/*.scss', gulp.series(styles));
-    watch('src/**/*.js', gulp.series(scripts));
-    watch('src/**/*.html', gulp.series(html, reload));
+    watch('src/*.js', gulp.series(scripts));
+    watch('src/*.html', gulp.series(html, reload));
     watch('src/img/sprite/*.svg', gulp.series(sprite));
     watch('src/img/*.{jpg,png,svg}', gulp.series(images));
     watch('src/img/webp/.{jpg,png}', gulp.series(webp));

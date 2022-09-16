@@ -1,0 +1,72 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin media($arg) {
+  @if (type-of($arg) == string) {
+    @if ($arg == md) {
+      $arg: "(min-width: #{$md})";
+    } @else if ($arg == lg) {
+      $arg: "(min-width: #{$lg})";
+    } @else if ($arg == xlg) {
+      $arg: "(min-width: #{$xlg})";
+    }
+  }
+
+  @if (type-of($arg) == string) {
+    @media #{$arg} {
+      @content;
+    }
+  }
+
+  @if (type-of($arg) == number) {
+    @media #{"(min-width: #{$arg}px)"} {
+      @content;
+    }
+  }
+}
+
+//helpers
+
+@mixin listres {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin inputres {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+@mixin btnres {
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}

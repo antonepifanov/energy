@@ -1,0 +1,9 @@
+body {
+  position: relative;
+  font-family: $main-font;
+  padding-top: 61px;
+
+  @include media(md) {
+    padding-top: 75px;
+  }
+}

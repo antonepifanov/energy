@@ -83,14 +83,6 @@
   }
 }
 
-.hero__rate {
-  color: $red1;
-
-  span {
-    font-size: 22px;
-  }
-}
-
 .hero__button {
   @include btnres;
   display: grid;

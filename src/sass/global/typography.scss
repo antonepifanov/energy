@@ -19,12 +19,17 @@ h2 {
 }
 
 h3 {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.4;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2;
 
   @include media(md) {
-    font-size: 20px;
-    line-height: 1.2;
+    font-size: 30px;
+    line-height: 1.7;
+  }
+
+  @include media(lg) {
+    font-size: 38px;
+    line-height: 1.4;
   }
 }

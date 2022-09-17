@@ -41,6 +41,14 @@ html {
   }
 }
 
+.rate {
+  color: $red1;
+
+  span {
+    font-size: 22px;
+  }
+}
+
 .hidden {
   display: none;
 }

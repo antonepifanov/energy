@@ -1,0 +1,130 @@
+.hero {
+  display: flex;
+  min-height: 313px;
+  padding-top: 52px;
+  padding-bottom: 52px;
+  background-image: url("../img/hero-mobile.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  box-shadow: 0px 4px 4px 0px rgba($color-default-black, 0.25);
+  margin-bottom: 40px;
+
+
+  @include retina {
+    background-image: url("../img/hero-mobile@2x.webp");
+  }
+
+  @include media(md) {
+    min-height: 600px;
+    padding-top: 172px;
+    padding-bottom: 172px;
+    background-image: url("../img/hero-tablet.webp");
+    box-shadow: none;
+    margin-bottom: 60px;
+
+    @include retina {
+      background-image: url("../img/hero-tablet@2x.webp");
+    }
+  }
+
+  @include media(md) {
+    margin-bottom: 110px;
+  }
+
+  @include media(xlg) {
+    background-image: url("../img/hero-desktop.webp");
+
+    @include retina {
+      background-image: url("../img/hero-desktop@2x.webp");
+    }
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media(md) {
+    align-items: flex-start;
+  }
+}
+
+.hero__accent {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: $black1;
+
+  @include media(md) {
+    font-size: 20px;
+  }
+
+  @include media(lg) {
+    font-size: 24px;
+  }
+}
+
+.hero__title {
+  text-align: center;
+  max-width: 300px;
+
+  @include media(md) {
+    text-align: left;
+    max-width: 500px;
+  }
+
+  @include media(lg) {
+    max-width: 600px;
+  }
+}
+
+.hero__rate {
+  color: $red1;
+
+  span {
+    font-size: 22px;
+  }
+}
+
+.hero__button {
+  @include btnres;
+  display: grid;
+  place-items: center;
+  min-width: 209px;
+  min-height: 49px;
+  background-color: $yellow1;
+  border-radius: 5px;
+  font-family: $alternate-font;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  transition: $default-transition-settings;
+
+  @include media(lg) {
+    min-width: 219px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: $color-default-white;
+    color: $yellow1;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $color-default-white;
+    color: $yellow1;
+  }
+}

@@ -36,7 +36,7 @@
   <body>
     <header class="header">
       <div class="header__wrapper container">
-        <a class="header__logo" href="#">
+        <a class="header__logo" href="https://energotransbank.com/" target="_blank"  rel="noopener">
           <img src="img/logo-header.webp" srcset="img/logo-header@2x.webp 2x" width="177" height="29" alt="Логотип банка Энерготрансбанк." decoding="async">
         </a>
 
@@ -55,7 +55,27 @@
     </header>
 
     <main class="main">
-      <section class="request container">
+      <h1 class="visually-hidden">
+        Предложения кредитов с государственной поддержко от Энерготрансбанка
+      </h1>
+
+      <section class="hero">
+        <div class="hero__content container">
+          <b class="hero__accent">
+            Всё сложится
+          </b>
+
+          <h2 class="hero__title">
+            Кредит с&nbsp;господдержкой для бизнеса <span class="hero__rate"><span>от</span> 8,5%</span>
+          </h2>
+
+          <a href="#form" class="hero__button">
+            Подать заявку
+          </a>
+        </div>
+      </section>
+
+      <section class="request container" id="form">
         <div class="request__wrapper">
           <h2 class="request__title">
             Оставить заявку
@@ -65,7 +85,7 @@
             Расскажем все возможности и&nbsp;договоримся о встрече
           </p>
 
-          <form class="request__form" id="form" action="#" method="post" autocomplete="off">
+          <form class="request__form" action="#" method="post" autocomplete="off">
             <ul class="request__form-list">
                 <li class="request__form-item">
                   <input class="request__form-input" id="tel" type="tel" name="tel" pattern="\+?[0-9\s\-\(\)]+" placeholder="Ваш телефон" required>

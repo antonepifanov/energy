@@ -76,18 +76,18 @@
   width: 90%;
   margin-bottom: 12px;
 
-  @include media(lg) {
+  @include media(md) {
+    width: 100%;
     flex-direction: row;
     gap: 20px;
     margin-bottom: 17px;
-    width: 100%;
   }
 }
 
 .request__form-item {
   width: 100%;
 
-  @include media(lg) {
+  @include media(md) {
     width: calc((100% - 20px) / 2);
   }
 

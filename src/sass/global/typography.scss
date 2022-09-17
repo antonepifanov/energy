@@ -3,30 +3,13 @@ h3 {
   margin: 0;
 }
 
-h1 {
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-
-  @include media(md) {
-    font-size: 43px;
-    line-height: 1.2;
-  }
-
-  @include media(lg) {
-    font-size: 53px;
-    line-height: 1;
-  }
-}
-
 h2 {
   font-size: 30px;
   font-weight: 700;
   line-height: 1.1;
 
   @include media(md) {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   @include media(lg) {

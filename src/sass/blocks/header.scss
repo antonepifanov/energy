@@ -6,7 +6,9 @@
   min-height: 61px;
   display: flex;
   align-items: center;
+  background-color: $color-default-white;
   box-shadow: 0px 5px 5px -5px rgba($blue1, 0.6);
+  z-index: 100;
 
   @include media(md) {
     min-height: 75px;

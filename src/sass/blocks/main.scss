@@ -1,0 +1,7 @@
+.main {
+  padding-bottom: 40px;
+
+  @include media(lg) {
+    padding-bottom: 75px;
+  }
+}

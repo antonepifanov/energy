@@ -53,5 +53,48 @@
         </a>
       </div>
     </header>
+
+    <main class="main">
+      <section class="request container">
+        <div class="request__wrapper">
+          <h2 class="request__title">
+            Оставить заявку
+          </h2>
+
+          <p class="request__lead">
+            Расскажем все возможности и&nbsp;договоримся о встрече
+          </p>
+
+          <form class="request__form" id="form" action="#" method="post" autocomplete="off">
+            <ul class="request__form-list">
+                <li class="request__form-item">
+                  <input class="request__form-input" id="tel" type="tel" name="tel" pattern="\+?[0-9\s\-\(\)]+" placeholder="Ваш телефон" required>
+
+                  <label class="request__form-label visually-hidden" for="tel">
+                    Ваш номер телефона
+                  </label>
+                </li>
+
+                <li class="request__form-item request__form-item--select">
+                  <select class="request__form-input" id="time" name="time" placeholder="Ваш телефон">
+                    <option value="" selected disabled>Удобное время</option>
+                    <option>В будни до обеда</option>
+                    <option>В будни вечером</option>
+                    <option>В выходные</option>
+                  </select>
+                </li>
+              </ul>
+
+              <p class="request__form-note">
+                Нажимая кнопку «Заказать звонок», я даю свое согласие на обработку моих персональных данных в соответствии с Федеральным законом № 152-ФЗ <a href="https://itmo.ru/file/stat/161/zakon_o_person_dann_27_07_2006.pdf" target="_blank">«О персональных данных»</a> от 27.07.2006 на условиях и для целей, определенных в Согласии на обработку персональных данных
+              </p>
+
+              <button class="request__form-button" type="submit">
+                Заказать звонок
+              </button>
+          </form>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

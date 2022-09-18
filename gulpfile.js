@@ -73,8 +73,12 @@ const sprite = () => {
 //Copy
 
 const copy = () => {
-    return src('src/fonts/*.{woff2,woff}')
-        .pipe(dest('dist/fonts'))
+    return src([
+      'src/fonts/*.{woff2,woff}',
+      'src/*.php'
+    ], {
+      base: 'src'
+    }).pipe(dest('dist'))
 }
 
 // Server

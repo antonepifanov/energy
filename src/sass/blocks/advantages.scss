@@ -1,0 +1,212 @@
+.advantages {
+  margin-bottom: 60px;
+
+  @include media(md) {
+    margin-bottom: 50px;
+  }
+
+  @include media(lg) {
+    margin-bottom: 130px;
+  }
+
+  @include media(xlg) {
+    padding-left: 374px;
+    padding-right: 374px;
+  }
+}
+
+.advantages__title {
+  color: $black1;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @include media(md) {
+    margin-bottom: 45px;
+  }
+
+  @include media(lg) {
+    margin-bottom: 53px;
+  }
+}
+
+.advantages__list {
+  @include listres;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include media(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  @include media(lg) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 79px;
+    row-gap: 46px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  gap: 13px;
+
+  @include media(md) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  @include media(lg) {
+    gap: 30px;
+  }
+
+  &:first-child {
+    &::after {
+      background-size: 27px 24px;
+      background-image: url("../img/adv-icon-1.svg");
+
+      @include media(lg) {
+        background-size: 59px 52px;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    &::after {
+      background-size: 25px 21px;
+      background-image: url("../img/adv-icon-2.svg");
+
+      @include media(lg) {
+        background-size: 57px 48px;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      background-size: 27px 23px;
+      background-image: url("../img/adv-icon-3.svg");
+
+      @include media(lg) {
+        background-size: 52px 51px;
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    &::after {
+      background-size: 26px 22px;
+      background-image: url("../img/adv-icon-4.svg");
+
+      @include media(lg) {
+        background-size: 55px 46px;
+      }
+    }
+  }
+
+  &:nth-child(5) {
+    &::after {
+      background-size: 24px 23px;
+      background-image: url("../img/adv-icon-5.svg");
+
+      @include media(lg) {
+        background-size: 60px 50px;
+      }
+    }
+  }
+
+  &:last-child {
+    &::after {
+      background-size: 27px 23px;
+      background-image: url("../img/adv-icon-6.svg");
+
+      @include media(lg) {
+        background-size: 60px 50px;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    top: 3px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid $gray3;
+    box-shadow: 0px 4px 8px 0px rgba($color-default-black, 0.07);
+    flex-shrink: 0;
+
+    @include media(md) {
+      top: unset;
+    }
+
+    @include media(lg) {
+      width: 110px;
+      height: 110px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $yellow1;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include media(md) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include media(lg) {
+      width: 88px;
+      height: 88px;
+      top: 11px;
+    }
+  }
+}
+
+.advantages__item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include media(md) {
+    align-items: center;
+  }
+
+  b {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    color: $black1;
+
+    @include media(lg) {
+      font-size: 22px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.4;
+
+    @include media(md) {
+      text-align: center;
+    }
+
+    @include media(lg) {
+      font-size: 19px;
+      line-height: 1.3;
+    }
+  }
+}

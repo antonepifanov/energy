@@ -44,6 +44,18 @@
     }
   }
 
+  &:focus-visible {
+    outline: 0;
+    border-color: $yellow1;
+    background-color: $color-default-white;
+
+    &::before {
+      border-left-color: $yellow1;
+      border-top-color: $yellow1;
+      transform: translate(-50%, -45%) rotate(45deg);
+    }
+  }
+
   &--shown {
     opacity: 1;
   }

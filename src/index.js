@@ -5459,7 +5459,6 @@ async function sendForm() {
 const validateForm = (evt) => {
   evt.preventDefault();
   if (form.tel.value) {
-    formButton.classList.add('loading');
     sendForm().then(res => res.json()).then(data => {
       if (data.success == true) {
         showSuccessModal();

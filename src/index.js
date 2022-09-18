@@ -5062,6 +5062,7 @@
 /* stylelint-enable */
 
 
+// Для маски
 const initPhoneMask = () => {
   var element = document.querySelector("input[type='tel']")
   if (!element) {
@@ -5073,3 +5074,18 @@ const initPhoneMask = () => {
   var mask = IMask(element, maskOptions)
 }
 initPhoneMask();
+
+// Для кнопки наверх
+const upButton = document.querySelector('.up-button');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 200) {
+    upButton.classList.add('up-button--shown');
+  } else {
+    upButton.classList.remove('up-button--shown');
+  }
+});
+
+upButton.addEventListener('click', () => {
+  window.scrollTo(0, 0);
+});

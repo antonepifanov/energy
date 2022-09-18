@@ -1,0 +1,36 @@
+.up-button {
+	width:50px;
+	height:50px;
+	position:fixed;
+	bottom:30px;
+	right:30px;
+	background-color: $yellow1;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 50%;
+  opacity: 0;
+  transition: $default-transition-settings;
+
+  @include media(lg) {
+    bottom:60px;
+	  right:60px;
+    width:70px;
+	  height:70px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid $color-default-white;
+    border-top: 3px solid $color-default-white;
+    transform: translate(-50%, -30%) rotate(45deg);
+  }
+
+  &--shown {
+    opacity: 1;
+  }
+}

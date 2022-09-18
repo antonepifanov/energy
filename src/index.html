@@ -288,7 +288,7 @@
           <form class="request__form" action="./mail.php" method="POST" autocomplete="off">
             <ul class="request__form-list">
                 <li class="request__form-item">
-                  <input class="request__form-input" id="tel" type="tel" name="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="Ваш телефон" required>
+                  <input class="request__form-input" id="tel" type="tel" name="tel" placeholder="Ваш телефон" required>
 
                   <label class="request__form-label visually-hidden" for="tel">
                     Ваш номер телефона
@@ -296,12 +296,14 @@
                 </li>
 
                 <li class="request__form-item request__form-item--select">
-                  <select class="request__form-input" id="time" name="time" placeholder="Ваш телефон">
-                    <option value="" selected disabled>Удобное время</option>
-                    <option>В будни до обеда</option>
-                    <option>В будни вечером</option>
-                    <option>В выходные</option>
-                  </select>
+
+                    <select class="request__form-input" id="time" name="time">
+                      <option value="" selected>Удобное время</option>
+                      <option>В будни до обеда</option>
+                      <option>В будни вечером</option>
+                      <option>В выходные</option>
+                    </select>
+
                 </li>
               </ul>
 

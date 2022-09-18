@@ -10,6 +10,7 @@
 	border-radius: 50%;
   opacity: 0;
   transition: $default-transition-settings;
+  cursor: pointer;
 
   @include media(lg) {
     bottom:60px;

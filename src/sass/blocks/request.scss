@@ -92,9 +92,7 @@
     width: calc((100% - 20px) / 2);
   }
 
-  &--select {
-    position: relative;
-
+  .custom-select-container {
     &::after {
       position: absolute;
       content: "";
@@ -106,6 +104,13 @@
       border-left: 2px solid $yellow1;
       border-bottom: 2px solid $yellow1;
       pointer-events: none;
+      transition: $default-transition-settings;
+    }
+
+    &.is-open {
+      &::after {
+        transform: translateY(-50%) rotate(135deg);
+      }
     }
   }
 
@@ -131,6 +136,13 @@
 
   .custom-select-option {
     padding: 5px 20px;
+    transition: $default-transition-settings;
+    cursor: pointer;
+
+    &.has-focus {
+      background-color: $yellow1;
+      color: $color-default-white;
+    }
   }
 }
 

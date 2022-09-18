@@ -93,6 +93,14 @@
   }
 
   .custom-select-container {
+    font-size: 16px;
+    line-height: 1;
+    color: $black2;
+
+    @include media(lg) {
+      font-size: 19px;
+    }
+
     &::after {
       position: absolute;
       content: "";
@@ -122,6 +130,11 @@
     background-color: $color-default-white;
     border-radius: 3px;
 
+    &:hover {
+      outline: 2px solid $yellow1;
+      outline-offset: calc(-1 * 1px);
+    }
+
     &:focus-visible {
       outline: 2px solid $yellow1;
       outline-offset: calc(-1 * 1px);
@@ -150,6 +163,7 @@
   @include inputres;
   appearance: none;
   -webkit-appearance: none;
+  cursor: pointer;
   font-size: 16px;
   line-height: 1;
   color: $black2;

@@ -29,10 +29,18 @@
     border-left: 3px solid $color-default-white;
     border-top: 3px solid $color-default-white;
     transform: translate(-50%, -30%) rotate(45deg);
+    transition: $transition-long;
   }
 
   &:hover {
-    opacity: 0.8;
+    border: 2px solid $yellow1;
+    background-color: $color-default-white;
+
+    &::before {
+      border-left-color: $yellow1;
+      border-top-color: $yellow1;
+      transform: translate(-50%, -45%) rotate(45deg);
+    }
   }
 
   &--shown {

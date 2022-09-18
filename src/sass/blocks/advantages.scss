@@ -164,7 +164,7 @@
     background-position: center;
 
     @include media(md) {
-      top: 6px;
+      top: 5px;
       left: 50%;
       transform: translateX(-50%);
     }

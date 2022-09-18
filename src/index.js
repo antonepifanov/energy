@@ -5440,5 +5440,42 @@ upButton.addEventListener('click', () => {
   window.scrollTo(0, 0);
 });
 
-
 customSelect("select");
+
+// fetch form
+
+const form = document.querySelector('form');
+const formButton = form.querySelector('button[type="submit"]');
+const successModal = document.querySelector('.success-dialog')
+
+async function sendForm() {
+  const data = new FormData(form);
+  return await fetch(form.action, {
+    method: 'POST',
+    body: data
+  });
+}
+
+const validateForm = (evt) => {
+  evt.preventDefault();
+  if (form.tel.value) {
+    formButton.classList.add('loading');
+    sendForm().then(res => res.json()).then(data => {
+      if (data.success == true) {
+        showSuccessModal();
+        form.tel.value = '';
+      } else {
+        alert('Ошибка отправки формы. Попробуйте обновить страницу и попробовать ещё раз')
+      }
+    });
+  } else {
+    alert('Пожалуйста, заполите форму');
+  }
+}
+
+const showSuccessModal = () => {
+  successModal.showModal();
+  setTimeout(() => successModal.close(), 3000);
+}
+
+formButton.addEventListener('click', validateForm);

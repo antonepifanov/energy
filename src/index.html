@@ -285,7 +285,7 @@
             Расскажем все возможности и&nbsp;договоримся о встрече
           </p>
 
-          <form class="request__form" action="./mail.php" method="POST" autocomplete="off">
+          <form class="request__form" action="mail.php" method="POST" autocomplete="off">
             <ul class="request__form-list">
                 <li class="request__form-item">
                   <input class="request__form-input" id="tel" type="tel" name="tel" placeholder="Ваш телефон" required>
@@ -353,8 +353,13 @@
       </div>
     </footer>
 
-    <div class="up-button" aria-label="Кнопка наверх">
-    </div>
+    <button class="up-button" type="button" aria-label="Кнопка наверх">
+    </button>
+
+    <dialog class="success-dialog">
+      <b>Ваша заявка принята</b>
+      <p>Мы свяжемся с вами в указанное время.</p>
+    </dialog>
 
     <script src="index.js" defer></script>
   </body>

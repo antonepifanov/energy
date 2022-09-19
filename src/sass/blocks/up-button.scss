@@ -1,4 +1,5 @@
 .up-button {
+  pointer-events: none;
   border: 2px solid transparent;
 	width:50px;
 	height:50px;
@@ -12,6 +13,7 @@
   opacity: 0;
   transition: $default-transition-settings;
   cursor: pointer;
+  z-index: 40;
 
   @include media(lg) {
     bottom:60px;
@@ -44,6 +46,10 @@
     }
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:focus-visible {
     outline: 0;
     border-color: $yellow1;
@@ -58,5 +64,6 @@
 
   &--shown {
     opacity: 1;
+    pointer-events: auto;
   }
 }

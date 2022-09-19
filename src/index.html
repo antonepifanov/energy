@@ -357,16 +357,17 @@
       <p>Мы свяжемся с вами в указанное время.</p>
     </dialog>
 
-    <div class="cookies show-cookies">
-      <div class="cookie-left">
-        <p>
-          Сайт КБ «ЭНЕРГОТРАНСБАНК» (АО) использует файлы cookie и сервис Яндекс.Метрика. Условия использования настоящего сайта, использования файлов cookie и сервиса Яндекс.Метрика содержатся в <a href="https://www.energotransbank.com/repo/ped/docs/about/personal-data/personal-data-confirmation-reg.pdf" target="_blank">пользовательском соглашении</a>. Нажимая на поле «согласен», посетитель сайта подтверждает, что настоящее уведомление ему понятно, и содержащиеся в нем и пользовательском соглашении условия посетителем приняты, а также подтверждает ознакомление и принятие условий <a href="https://www.energotransbank.com/repo/ped/docs/about/personal-data/personal-data.pdf" target="_blank">Политики по обработке персональных данных в КБ «ЭНЕРГОТРАНСБАНК» (АО)</a>. Посетитель обязан покинуть настоящий сайт в случае несогласия с условиями его использования.
+    <dialog class="cookies">
+      <form class="cookies__form" method="dialog">
+        <p class="cookies__info">
+          Сайт КБ «ЭНЕРГОТРАНСБАНК» (АО) использует файлы cookie и сервис Яндекс.Метрика. Условия использования настоящего сайта, использования файлов cookie и сервиса Яндекс.Метрика содержатся в <a href="https://www.energotransbank.com/repo/ped/docs/about/personal-data/personal-data-confirmation-reg.pdf" target="_blank" rel="noopener">пользовательском соглашении</a>. Нажимая на поле «согласен», посетитель сайта подтверждает, что настоящее уведомление ему понятно, и содержащиеся в нем и пользовательском соглашении условия посетителем приняты, а также подтверждает ознакомление и принятие условий <a href="https://www.energotransbank.com/repo/ped/docs/about/personal-data/personal-data.pdf" target="_blank" rel="noopener">Политики по обработке персональных данных в КБ «ЭНЕРГОТРАНСБАНК» (АО)</a>. Посетитель обязан покинуть настоящий сайт в случае несогласия с условиями его использования.
         </p>
-      </div>
-      <a href="javascript:void(0)" class="btn btn_yellow accept">
-        <span>Согласен</span>
-      </a>
-    </div>
+
+        <button class="cookies__button" type="submit">
+          Согласен
+        </button>
+      </form>
+    </dialog>
 
     <script src="index.js" defer></script>
   </body>

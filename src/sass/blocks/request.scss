@@ -229,6 +229,18 @@
     &:active {
       opacity: 0.4;
     }
+
+    &:focus {
+      outline: none;
+      color: $yellow1;
+      text-decoration: none;
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: $yellow1;
+      text-decoration: none;
+    }
   }
 }
 

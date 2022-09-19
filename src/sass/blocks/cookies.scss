@@ -1,0 +1,124 @@
+.cookies {
+  border: none;
+	position: fixed;
+	bottom: 20px;
+	left: 60px;
+	right: 60px;
+	width: calc(100% - 120px);
+	background: #fff;
+	box-shadow: 0 0 18px rgb(0 0 0 / 20%);
+	padding: 25px;
+	border-radius: 6px;
+	transition: $default-transition-settings;
+  z-index: 50;
+
+  @include media(md) {
+		width: 100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 0;
+	}
+
+	@include media(xlg) {
+		width: calc(100% - 60px);
+		left: 30px;
+		right: 30px;
+	}
+
+  &[open] {
+    display: flex;
+  }
+}
+
+.cookies__form {
+  display: flex;
+  flex-direction: column;
+	align-items: center;
+  gap: 20px;
+
+  @include media(md) {
+    flex-direction: row;
+    gap: 25px;
+  }
+}
+
+.cookies__info {
+  font-size: 10px;
+  line-height: 1.1;
+  margin: 0;
+  text-align: justify;
+
+  @include media(md) {
+    font-size: 12px;
+  }
+
+  @include media(lg) {
+    font-size: 15px;
+  }
+
+  a {
+    display: inline;
+    text-decoration: underline;
+    color: #FFA217;
+    transition: $default-transition-settings;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+
+    &:focus {
+      outline: none;
+      text-decoration: none;
+    }
+
+    &:focus-visible {
+      outline: none;
+      text-decoration: none;
+    }
+  }
+}
+
+.cookies__button {
+  @include btnres;
+  display: grid;
+  place-items: center;
+  min-width: 209px;
+  min-height: 49px;
+  background-color: $yellow1;
+  border-radius: 5px;
+  font-family: $alternate-font;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  transition: $default-transition-settings;
+
+  @include media(lg) {
+    min-width: 219px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: $color-default-white;
+    color: $yellow1;
+    border: 2px solid $yellow1;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $color-default-white;
+    color: $yellow1;
+    border: 2px solid $yellow1;
+  }
+}

@@ -5478,3 +5478,23 @@ const showSuccessModal = () => {
 }
 
 formButton.addEventListener('click', validateForm);
+
+//Для cookies
+
+(() => {
+  const cookiesNote = document.querySelector('.cookies');
+  if (!cookiesNote) return;
+
+  const cookiesButton = cookiesNote.querySelector('.cookies__button');
+
+  if (localStorage.getItem('cookie_policy')) {
+    cookiesNote.show();
+
+    cookiesButton.addEventListener('click', () => {
+      localStorage.setItem('cookie_policy', true);
+    });
+  }
+  else {
+    cookiesNote.remove();
+  }
+})();

@@ -31,6 +31,7 @@
   transition: $default-transition-settings;
 
   &:hover {
+    text-decoration: none;
     opacity: 0.6;
   }
 
@@ -40,6 +41,7 @@
 
   &:focus-visible {
     outline: none;
+    text-decoration: none;
     opacity: 0.6;
   }
 

@@ -5444,7 +5444,8 @@ customSelect("select");
 
 // fetch form
 
-const form = document.querySelector('form');
+const page = document.querySelector('body');
+const form = document.querySelector('.request__form');
 const formButton = form.querySelector('button[type="submit"]');
 const successModal = document.querySelector('.success-dialog')
 
@@ -5472,9 +5473,19 @@ const validateForm = (evt) => {
   }
 }
 
+const openModal = () => {
+  page.classList.add('modal-open');
+  successModal.classList.remove('hidden');
+}
+
+const closeModal = () => {
+  page.classList.remove('modal-open');
+  successModal.classList.add('hidden');
+}
+
 const showSuccessModal = () => {
-  successModal.showModal();
-  setTimeout(() => successModal.close(), 3000);
+  openModal();
+  setTimeout(() => closeModal(), 3000);
 }
 
 formButton.addEventListener('click', validateForm);
@@ -5488,10 +5499,11 @@ formButton.addEventListener('click', validateForm);
   const cookiesButton = cookiesNote.querySelector('.cookies__button');
 
   if (!localStorage.getItem('cookie_policy')) {
-    cookiesNote.show();
+    cookiesNote.classList.add('cookies--open');
 
     cookiesButton.addEventListener('click', () => {
       localStorage.setItem('cookie_policy', true);
+      cookiesNote.classList.remove('cookies--open');
     });
   }
   else {

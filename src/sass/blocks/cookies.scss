@@ -1,4 +1,5 @@
 .cookies {
+  display: flex;
   border: none;
 	position: fixed;
 	bottom: 20px;
@@ -19,13 +20,9 @@
     margin-right: auto;
 	}
 
-  &[open] {
+  &--open {
     display: flex;
     transform: translateY(0);
-  }
-
-  &:not([open]) {
-    display: flex;
   }
 }
 

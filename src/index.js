@@ -5487,7 +5487,7 @@ formButton.addEventListener('click', validateForm);
 
   const cookiesButton = cookiesNote.querySelector('.cookies__button');
 
-  if (localStorage.getItem('cookie_policy')) {
+  if (!localStorage.getItem('cookie_policy')) {
     cookiesNote.show();
 
     cookiesButton.addEventListener('click', () => {

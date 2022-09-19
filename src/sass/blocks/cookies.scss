@@ -2,31 +2,29 @@
   border: none;
 	position: fixed;
 	bottom: 20px;
-	left: 60px;
-	right: 60px;
-	width: calc(100% - 120px);
+	left: 25px;
+	right: 25px;
+	width: calc(100% - 50px);
 	background: #fff;
 	box-shadow: 0 0 18px rgb(0 0 0 / 20%);
 	padding: 25px;
 	border-radius: 6px;
-	transition: $default-transition-settings;
-  z-index: 50;
+	transition: transform $transition-long;
+  z-index: 95;
+  transform: translateY(calc(100% + 30px));
+  max-width: $lg;
 
   @include media(md) {
-		width: 100%;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		border-radius: 0;
-	}
-
-	@include media(xlg) {
-		width: calc(100% - 60px);
-		left: 30px;
-		right: 30px;
+    margin-left: auto;
+    margin-right: auto;
 	}
 
   &[open] {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  &:not([open]) {
     display: flex;
   }
 }

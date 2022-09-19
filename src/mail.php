@@ -1,6 +1,3 @@
-<meta http-equiv='refresh' content='3; url=.'>
-<meta charset="UTF-8" />
-
 <?php
 
 $email = "calc_sme_credit@energotransbank.com";

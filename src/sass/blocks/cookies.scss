@@ -6,8 +6,8 @@
 	left: 25px;
 	right: 25px;
 	width: calc(100% - 50px);
-	background: #fff;
-	box-shadow: 0 0 18px rgb(0 0 0 / 20%);
+	background-color: $color-default-white;
+	box-shadow: 0 0 18px rgb($color-default-black, 0.2);
 	padding: 25px;
 	border-radius: 6px;
 	transition: transform $transition-long;
@@ -55,7 +55,7 @@
   a {
     display: inline;
     text-decoration: underline;
-    color: #FFA217;
+    color: $yellow1;
     transition: $default-transition-settings;
 
     &:hover {
